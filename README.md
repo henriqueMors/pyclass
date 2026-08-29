@@ -1,0 +1,2 @@
+# pyclass
+Class about python
