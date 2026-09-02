@@ -12,3 +12,7 @@ print(movieName.find("u")) # Retorna a posição de um determinado caractere
 print(movieName.find("o")) # Conta caracteres
 print(movieName.replace("Top", "Matrix")) # Altera elemento por outro
 print(movieDescription.split(','))
+
+palavra = input("Digite uma palavra:\n")
+numero = int(input("Digite o número de vezes que essa palavra deve aparecer:\n"))
+print(numero*palavra)
