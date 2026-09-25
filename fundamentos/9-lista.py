@@ -1,5 +1,5 @@
 filmMatrix = ["Matrix", 1999, 8.7, True]
-print(filmMatrix)
+print(type(filmMatrix))
 
 filmsList = ["Inception", "The Shawshank Redemption",
              "The Dark Kgnith", "Pulp Fiction", "Interstellar"]
