@@ -13,7 +13,8 @@ print(2*"=========================")
 print("Nome do Filme:", name, "\nAno de Lançamento:", yearLaunch, "\nNota do Filme:", noteMovie)
 
 # Alternativa 3
-print(f"Nome do jogo: {name}\n"
+print(
+      f"Nome do jogo: {name}\n"
       f"Ano de lançamento: {yearLaunch}\n"
       f"Nota do filme: {noteMovie}\n"
       )
