@@ -3,7 +3,7 @@ yearLaunch = int(input("Digite o ano de lançamento do filme:\n"))
 noteMovie = float(input("Digite a nota do filme:\n"))
 
 print("Dados do Filme")
-print("=========================")
+print(2*"=========================")
 # Alternativa 1
 # print("Nome do filme:",name)
 # print("Ano de lançamento:",yearLaunch)
