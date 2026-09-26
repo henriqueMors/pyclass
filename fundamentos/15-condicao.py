@@ -29,4 +29,4 @@ else:
     print("Operação inválida")
     result = 0
     
-print(f"Resultado da operação é: {result:.2f}")
+print(f"Resultado da operação é: {result:.4f}")
