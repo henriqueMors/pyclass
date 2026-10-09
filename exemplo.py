@@ -1,9 +1,7 @@
-nome = input("Digite seu nome: \n")
+def somar (x, y):
+    return x + y
 
-print(f"{nome}, me responda quanto é 1 + 1?")
-resposta = int(input())
+num1 = int(input("insira o primeiro numero da soma: "))
+num2 = int(input("insira o segundo numero da soma: "))
 
-if resposta == 2:
-    print("acertou")
-else: 
-    print("Como voce é burro!")
+print (somar(num1, num2))
