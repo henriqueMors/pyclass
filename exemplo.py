@@ -1,10 +1,9 @@
-entregas = [
-    {"nome": "Login",         "status": "concluída"},
-    {"nome": "API Pagamento", "status": "atrasada"},
-    {"nome": "Relatório",     "status": "concluída"},
-    {"nome": "Dashboard",     "status": "em andamento"},
-    {"nome": "Integração",    "status": "atrasada"},
-]
+nome = input("Digite seu nome: \n")
 
-for e in entregas:
-    print(f"{e['nome']:<15} -> {e['status']}")
+print(f"{nome}, me responda quanto é 1 + 1?")
+resposta = int(input())
+
+if resposta == 2:
+    print("acertou")
+else: 
+    print("Como voce é burro!")
