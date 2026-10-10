@@ -80,7 +80,7 @@ def main(page: ft.Page):
         senha_inp.on_submit = entrar
 
         page.add(
-            ft.Text("Acesso ao sistema", size=22, weight=ft.FontWeight.BOLD),
+            ft.Text("Acesso ao sistema", size=35, color=ft.Colors.BLUE, weight=ft.FontWeight.BOLD),
             usuario_inp,
             senha_inp,
             ft.Row([
