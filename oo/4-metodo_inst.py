@@ -21,7 +21,10 @@ class Game:
         self.totalEvaluation += note
         self.evaluators += 1
         
-    def average(self):
+def average(self):
+    if self.evaluators == 0:
+        print(f"{self.name} ainda não tem avaliações.")
+    else:
         print(f"Média do jogo {self.name}: {self.totalEvaluation / self.evaluators}")
     
 game1 = Game("The Legend of Zelda", 2017, False, 9.5)
