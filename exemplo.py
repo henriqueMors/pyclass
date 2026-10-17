@@ -1,3 +1,26 @@
+class Aluno:
+    def __init__(self, numero, nome, nota):
+        self.numero = numero
+        self.nome = nome
+        self.nota = nota
+
+    def classificar(self):
+        if self.nota >= 7:
+            return "Aprovado"
+        elif self.nota >= 5:
+            return "Recuperação"
+        else:
+            return "Reprovado"
+
+    def __str__(self):
+        return f"{self.numero} - {self.nome}: {self.nota} ({self.classificar()})"
+
+def media_turma(alunos):
+    total = 0
+    for aluno in alunos:
+        total += aluno.nota
+    return total / len(alunos)
+
 # Programa principal
 alunos = []   # começa vazia
 
