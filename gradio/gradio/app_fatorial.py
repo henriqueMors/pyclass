@@ -4,7 +4,7 @@ import math
 def fatorial(num):
     if num < 0:
         return "Fatorial não definido para números negativos"
-    return math.factorial(num)
+    return math.factorial(int(num))
 
 # print(fatorial(5))
 iface = gr.Interface(

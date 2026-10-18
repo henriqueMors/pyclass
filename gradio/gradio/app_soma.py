@@ -12,4 +12,4 @@ iface = gr.Interface(
     theme="default"
 )
 
-iface.launch()
+iface.launch(share=True, theme="default")
