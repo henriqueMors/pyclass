@@ -46,8 +46,8 @@ iface = gr.Interface(
         ),
         gr.Textbox(label="Descrição do Dia", lines=4, placeholder="Descreva o dia")
     ],
-    outputs=gr.Markdown(label="Relatório do CLima"),
-    title="Relatório de CLima",
+    outputs=gr.Markdown(label="Relatório do Clima"),
+    title="Relatório de Clima",
     description="Crie um relatório de clima com temperatura"
 )
 
