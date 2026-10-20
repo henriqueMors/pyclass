@@ -45,14 +45,17 @@ for numero in regressivo(num):
 
 import re
  
-PADRAO_CPF = r"\d{3}\.\d{3}\.\d{3}-\d{2}"
- 
- 
-def formato_valido(cpf):
-    """True se o texto estiver exatamente no formato 000.000.000-00."""
-    return re.fullmatch(PADRAO_CPF, cpf) is not None
- 
- 
-def extrator_url(url)
-    texto = url
-        
+def validar_senha(senha):
+    return (
+        len(senha) >= 8
+        and re.search(r"[A-Z]", senha) is not None
+        and re.search(r"[a-z]", senha) is not None
+        and re.search(r"\d", senha) is not None
+    )
+
+senha = input("Digite uma senha: ")
+
+if validar_senha(senha):
+    print("Senha válida!")
+else:
+    print("Senha inválida. Use pelo menos 8 caracteres, com letra maiúscula, letra minúscula e número.")
