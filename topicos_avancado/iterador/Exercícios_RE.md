@@ -61,9 +61,39 @@ if validar_senha(senha):
 else:
     print("Senha inválida. Use pelo menos 8 caracteres, com letra maiúscula, letra minúscula e número.")
 ================================================================================
-
 Exercício 3: Contagem de Palavras
 
 Enunciado: Implemente uma função que conte o número de palavras em um texto. 
 Considere palavras como sequências de caracteres alfabéticos (ou alfanuméricos) 
 que são separadas por espaços em branco ou pontuação.
+================================================================================
+import re
+ 
+def regexDivisor(texto):
+    textoDividido = re.split(r'\s+', texto)
+    quantidade = len(textoDividido)
+    print(quantidade)
+
+textoCompleto = """
+Relatório de links da semana
+
+Na segunda-feira, a equipe publicou o novo portal em https://www.portal-noticias.example.com
+e o blog técnico em http://blog.devteam.example.org/artigos/python-regex.
+O formulário de inscrição está em https://inscricoes.cursoonline.example/turma-2026?origem=email
+e a documentação da API foi movida para https://api.servicos.example.net/v2/docs.
+
+Para suporte, acesse http://suporte.minhaempresa.example.com.br/chamados/novo
+ou envie um e-mail para atendimento@minhaempresa.example.com.br (isto não é uma URL).
+O painel de vendas fica em https://dashboard.vendas.example.com/relatorios/mensal#outubro,
+e o espelho antigo ainda responde em http://legado.sistema.example:8080/login.
+
+Links de parceiros:
+- https://loja.parceiro-um.example.com/produtos/fone-bluetooth
+- http://www.parceiro-dois.example.org
+- https://imprensa.agencia.example.com.br/releases/2026/10/lancamento.html
+
+Atenção: www.semprotocolo.example.com e ftp://arquivos.example.com não começam com http.
+"""
+
+regexDivisor(textoCompleto)
+================================================================================
