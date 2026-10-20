@@ -24,3 +24,20 @@ for veiculo, total in Counter(n["veiculo"] for n in mencoes).most_common():
 print("\nLista de menções:")
 for i, n in enumerate(mencoes, start=1):
     print(f"  {i}. [{n['veiculo']}] {n['titulo']}")
+
+
+
+
+def regressivo(n):
+    print("[regressor] começou")
+    for i in range(n, 0, -1):
+        print(f"[regressor] vou entregar o {i}")
+        yield i
+        print(f"[regressor] voltei depois do {i}")
+    print("[regressor] acabou")
+
+
+num = int(input("Digite o regressor: \n"))
+
+for numero in regressivo(num):
+    print(f"[for] recebi o {numero}")
