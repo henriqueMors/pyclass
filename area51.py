@@ -21,3 +21,4 @@ print(f"Preços: {precos}")
 print(f"Com desconto: {com_desconto}")
 for etiqueta in etiquetas:
     print(etiqueta)
+
