@@ -1,6 +1,6 @@
-def mostrar(*args, **kwargs):
-    print("args:", args)
-    print("kwargs:", kwargs)
+alunos = []
 
-mostrar(30)
+while (nome := input("Nome: ")) != "":
+    alunos.append(nome)
 
+print(aluno)
