@@ -39,7 +39,7 @@ df_aba2 = pd.DataFrame(dados_aba2)
 df_aba3 = pd.DataFrame(dados_aba3)
 df_aba4 = pd.DataFrame(dados_aba4)
 
-caminho_arquivo = "dados/clientes.xlsx"
+caminho_arquivo = "topicos_avancado/Arquivos/dados/clientes.xlsx"
 
 with pd.ExcelWriter(caminho_arquivo, engine="openpyxl") as writer:
     df_aba1.to_excel(writer, sheet_name="Aba1", index=False)
