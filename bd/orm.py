@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, Column, Integer, String, Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine("sqlite:///banco.db", echo=True)
+engine = create_engine("sqlite:///bd/banco.db", echo=True)
 Base = declarative_base()
 
 class Filme(Base):
@@ -41,7 +41,7 @@ def atualiza_filme(id, nome=None, ano=None, nota=None):
         session.commit()
     session.close()
 
-# atualiza_filme(1, "Homem Aranha", 2016, 9.0)
+atualiza_filme(1, "Homem Aranha", 2016, 9.0)
 
 # Excluir dados
 def exclui_filme(id):
@@ -55,4 +55,3 @@ def exclui_filme(id):
     session.close()
 
 exclui_filme(2)
-        
