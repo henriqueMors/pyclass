@@ -3,12 +3,12 @@ import os
 from pathlib import Path
 
 # 1-Importando os dados de todas as sheets
-tb_clientes_dict = pd.read_excel("dados/clientes.xlsx", sheet_name=None)
+tb_clientes_dict = pd.read_excel("topicos_avancado/Arquivos/dados/clientes.xlsx", sheet_name=None)
 print(tb_clientes_dict)
 print(type(tb_clientes_dict))
 
 #2-Criando a pasta 'planilhas_separadas' se não existir
-pasta_saida = "dados/planilhas_separadas"
+pasta_saida = "topicos_avancado/Arquivos/dados/planilhas_separadas"
 if not os.path.exists(pasta_saida):
     os.makedirs(pasta_saida)
     
@@ -18,7 +18,7 @@ for nome_aba, tabela in tb_clientes_dict.items():
     tabela.to_excel(caminho_arquivo, index=False)
     
 #4-Criando a pasta 'planilhas_consolidadas' se não existir
-pasta_consolidada = "dados/planilhas_consolidadas"
+pasta_consolidada = "topicos_avancado/Arquivos/dados/planilhas_consolidadas"
 if not os.path.exists(pasta_consolidada):
     os.makedirs(pasta_consolidada)
     
