@@ -3,9 +3,9 @@ name = input("Digite o nome do aluno:\n")
 """
 Arquivos - Modos de Operação:
 
-1-> Modo W - write
-2-> Modo A - append
-3-> Modo R - read
+1-> Modo W - write - *ESCRITA*
+2-> Modo A - append - *ADIÇÃO*
+3-> Modo R - read - *LEITURA*
 """
 
 # Implementação 1
