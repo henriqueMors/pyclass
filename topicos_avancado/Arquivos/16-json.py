@@ -9,7 +9,7 @@ dados = {
     ]
 }
 
-caminho_arquivo = "dados/clientes.json"
+caminho_arquivo = "topicos_avancado/Arquivos/dados/clientes.json"
 
 #1-Escrevendo dados em arquivo JSON
 with open(caminho_arquivo, "w", encoding="utf-8") as f:
