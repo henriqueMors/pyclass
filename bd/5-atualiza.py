@@ -1,11 +1,11 @@
 import sqlite3
 
 # 1- Conectando no BD
-conexao = sqlite3.connect('titulo.db')
+conexao = sqlite3.connect('bd/meubanco.db')
 cursor = conexao.cursor()
 
 # 2 - Atulizando dados
-id = 1
+id = 2
 cursor.execute(
     """
         UPDATE filmes SET nota = ?
