@@ -1,22 +1,21 @@
 import sqlite3
 
 # 1 - Conectando no BD
-conexao = sqlite3.connect('titulo.db')
+conexao = sqlite3.connect('bd/meubanco.db')
 
 # 2 - Criando o cursor
 cursor = conexao.cursor()
 
 # 3 - Criando a tabela
-cursor.execute(
-    """
-        CREATE TABLE filmes(
-            id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-            nome TEXT NOT NULL,
-            ano INTEGER NOT NULL,
-            nota REAL NOT NULL
-        );
-    """ 
-)
+cursor.execute("""
+    CREATE TABLE IF NOT EXISTS filmes (
+        id INTEGER PRIMARY KEY,
+        nome TEXT,
+        ano INTEGER,
+        nota REAL,
+        UNIQUE(nome, ano)
+    )
+""")
 
 # 4 - Fecha conexão
 conexao.close()
