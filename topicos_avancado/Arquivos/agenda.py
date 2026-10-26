@@ -7,23 +7,23 @@ def add_contact():
     
     contact = f"Nome: {name} \nEndereço: {address} \nTelefone: {phone}\n"
     
-    with open("dados/contatos.txt", "a", encoding="utf-8") as file:
+    with open("topicos_avancado/Arquivos/dados/contatos.txt", "a", encoding="utf-8") as file:
         file.write(contact)
         
 def view_contacts():
-    if not os.path.exists("dados/contatos.txt"):
+    if not os.path.exists("topicos_avancado/Arquivos/dados/contatos.txt"):
         print("Lista de contatos está vazia")
         return
-    with open("dados/contatos.txt", "r", encoding="utf-8") as file:
+    with open("topicos_avancado/Arquivos/dados/contatos.txt", "r", encoding="utf-8") as file:
         contacts = file.read()
     print("Lista de Contatos:")
     print(contacts)
     
 def delete_contacts():
-    if not os.path.exists("dados/contatos.txt"):
+    if not os.path.exists("topicos_avancado/Arquivos/dados/contatos.txt"):
         print("Lista de contatos está vazia")
         return
-    with open("dados/contatos.txt", "w", encoding="utf-8") as file:
+    with open("topicos_avancado/Arquivos/dados/contatos.txt", "w", encoding="utf-8") as file:
         file.write("")
         
     print("Contatos excluídos com sucesso!")
