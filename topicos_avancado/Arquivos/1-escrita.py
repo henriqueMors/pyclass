@@ -9,10 +9,10 @@ Arquivos - Modos de Operação:
 """
 
 # Implementação 1
-file = open("topicos_avancado/Arquivos/dados/names.txt", "a", encoding="utf-8")
-file.write(f"{name}\n")
-file.close()
+# file = open("topicos_avancado/Arquivos/dados/names.txt", "a", encoding="utf-8")
+# file.write(f"{name}\n")
+# file.close()
 
 # Implementação 2
-# with open("dados/names.txt", "a", encoding="utf-8") as file:
-# file.write(f"{name}\n")
+with open("topicos_avancado/Arquivos/dados/names.txt", "a", encoding="utf-8") as file:
+    file.write(f"{name}\n")
