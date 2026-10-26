@@ -17,7 +17,7 @@ dados = """<?xml version='1.0' encoding='utf-8'?>
 </clientes>
 """
 
-caminho_arquivo = "dados/clientes.xml"
+caminho_arquivo = "topicos_avancado/Arquivos/dados/clientes.xml"
 
 #1-Exportando dados para xml
 with open(caminho_arquivo, "w", encoding="utf-8") as f:

@@ -25,7 +25,7 @@ for cliente in dados_lidos["clientes"]:
     if cliente["nome"] == "Carlos":
         cliente["idade"] = 20
         
-novo_cliente = {"id": 5, "nome": "Samilly", "idade": 28, "cidade": "Florianópolis"}
+novo_cliente = {"id": 6, "nome": "vilela", "idade": 60, "cidade": "guiana"}
 dados_lidos["clientes"].append(novo_cliente) 
 
 #4-Salvar os dados manipulados no arquivo
