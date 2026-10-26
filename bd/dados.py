@@ -2,7 +2,7 @@ import sqlite3
 
 # 1- Conectar no BD
 def conecta_bd():
-    conexao = sqlite3.connect('titulo.db')
+    conexao = sqlite3.connect('bd/meubanco.db')
     return conexao
 
 # 2- Inserir Dados
