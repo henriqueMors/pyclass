@@ -5,13 +5,10 @@ conexao = sqlite3.connect('bd/meubanco.db')
 cursor = conexao.cursor()
 
 # 2 - Exclusão de dados
-id = (15, 14)
+id_filme = 16
 cursor.execute(
-    """
-        DELETE FROM filmes
-        WHERE ID in (?, ?)
-    """,
-    id
+    "DELETE FROM filmes WHERE id = ?",
+    (id_filme,)
 )
 
 conexao.commit()

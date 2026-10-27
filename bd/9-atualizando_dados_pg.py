@@ -5,11 +5,11 @@ cursor_obj = conn.cursor()
 
 sql = """
     UPDATE games
-    SET NAME = %s
+    SET NOME = %s
     WHERE ID = %s
 """
 
-cursor_obj.execute(sql, ("Fifa 23", 3))
-conectar.commit()
+cursor_obj.execute(sql, ("Ghost Busters", 16))
+conn.commit()
 print("Dados atualizados com sucesso")
-conectar.close()
+conn.close()

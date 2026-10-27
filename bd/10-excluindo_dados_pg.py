@@ -8,10 +8,10 @@ sql = """
     WHERE id = %s
 """
 
-cursor_obj.execute(sql, (5, ))
+cursor_obj.execute(sql, (16, ))
 
-conectar.commit()
+conn.commit()
 
 print("Dados excluídos com sucesso")
 
-conectar.close()
+conn.close()
