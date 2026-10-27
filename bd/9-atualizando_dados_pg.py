@@ -9,6 +9,6 @@ sql = """
 """
 
 cursor_obj.execute(sql, ("Fifa 23", 3))
-conn.commit()
+conectar.commit()
 print("Dados atualizados com sucesso")
-conn.close()
+conectar.close()

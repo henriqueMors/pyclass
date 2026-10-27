@@ -9,8 +9,8 @@ sql = """
 
 cursor_obj.execute(sql, (5, ))
 
-conn.commit()
+conectar.commit()
 
 print("Dados excluídos com sucesso")
 
-conn.close()
+conectar.close()
