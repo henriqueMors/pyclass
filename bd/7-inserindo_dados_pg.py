@@ -1,6 +1,6 @@
 from conexao_post import conn
 
-cursor_obj = conn.cursor()
+cursor_obj = conectar()
 
 games = [
     ('The Last of us II', 2020, 9.5),
