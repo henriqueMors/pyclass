@@ -10,11 +10,11 @@ games = [
 for game in games:
     cursor_obj.execute(
         """
-            INSERT INTO games(name, year, score)
+            INSERT INTO games(nome, ano, nota)
             VALUES (%s, %s, %s)
         """, game
         
-    )
+)
 conn.commit()
 print("Dados inseridos com sucesso!")
 conn.close()
