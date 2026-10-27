@@ -1,6 +1,7 @@
 from conexao_post import conectar
 
-cursor_obj = conectar()
+conn = conectar()
+cursor_obj = conn.cursor()
 
 sql = """
     DELETE FROM games
