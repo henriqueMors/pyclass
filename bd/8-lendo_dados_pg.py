@@ -1,4 +1,4 @@
-from conexao_post import conn
+from conexao_post import conectar
 
 cursor_obj = conectar()
 
