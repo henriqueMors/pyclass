@@ -35,7 +35,7 @@ style = ttk.Style(root)
 style.theme_use("clam")
 
 img_0 = Image.open("password.png")
-img_0 = img_0.resize((30, 30), Image.ANTIALIAS)
+img_0 = img_0.resize((30, 30), Image.LANCZOS)
 img_0 = ImageTk.PhotoImage(img_0)
 
 app_imagem = Label(frame_main, height=60, image=img_0,
