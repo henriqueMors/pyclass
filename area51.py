@@ -1,3 +1,5 @@
+### area de testes
+
 numeros = [5, 12, 3, 18, 7, 20]
 
 maiores = [n for n in numeros if n > 10]   # 1. separa os maiores que 10
