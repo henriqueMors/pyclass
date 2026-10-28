@@ -9,4 +9,3 @@ def buscar_usuario(cursor, email):
     cursor.execute("SELECT * FROM usuarios WHERE email = ?", 
                    (email, ))
     return cursor.fetchone()
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
