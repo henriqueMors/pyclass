@@ -1,33 +1,37 @@
 import flet as ft
 
-def main(page:ft.Page):
-    page.title = "Flet Exemplo"
-    # page.bgcolor = "red"
-    # page.bgcolor = "#C79030"
-    page.bgcolor = ft.colors.GREEN_ACCENT_700
-    
-    page.horizontal_alignment = ft.CrossAxisAlignment.START
-    
-    page.vertical_alignment = ft.MainAxisAlignment.START
-    
-    page.padding = ft.padding.all(100)
-    
-    page.add(
-        ft.Text(value="Hello WOrld"),
-        ft.Container(ft.Text(value="Hello World 2"), bgcolor="black")  
-    )
-    
-    # Desktop
-    page.window_height = 300
-    page.window_width = 600
-    page.window.resizable = False
-    
-    # Posicionamento da janela
-    page.window_top = 300
-    page.window_left = 300
-    
-    page.window_progress_bar = 1
-    
-    page.update()
+VERDE = ft.Colors.GREEN
+AMARELO = ft.Colors.AMBER_900
+VERMELHO = ft.Colors.RED
 
-ft.app(target=main)
+
+def main(page: ft.Page):
+    page.title = "Cores com o mouse"
+    page.padding = 0
+
+    caixa = ft.Container(
+        bgcolor=VERDE,
+        expand=True,                          # ocupa a tela toda, como um fundo
+        alignment=ft.Alignment.CENTER,
+        content=ft.Text("Passe o mouse e clique", size=24, color=ft.Colors.WHITE),
+    )
+
+    def mudar_cor(cor):
+        caixa.bgcolor = cor
+        page.update()                         # sem isso a cor não muda na tela
+
+    area = ft.GestureDetector(
+        content=caixa,
+        expand=True,
+        mouse_cursor=ft.MouseCursor.CLICK,
+        on_enter=lambda e: mudar_cor(AMARELO),      # ponteiro entrou
+        on_exit=lambda e: mudar_cor(VERDE),         # ponteiro saiu
+        on_tap_down=lambda e: mudar_cor(VERMELHO),  # apertou o botão
+        on_tap_up=lambda e: mudar_cor(AMARELO),     # soltou o botão
+        on_tap_cancel=lambda e: mudar_cor(AMARELO), # apertou, arrastou e soltou
+    )
+
+    page.add(area)
+
+
+ft.run(main)
