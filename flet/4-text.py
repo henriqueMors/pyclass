@@ -2,11 +2,11 @@ import flet as ft
 
 def main(page:ft.Page):
     t1 = ft.Text(
-        value = "Utilizando Elemento de Texto Utilizando Elemento de TextoUtilizando Elemento de Texto",
+        value = "Manchete Importante",
         theme_style=ft.TextThemeStyle.DISPLAY_LARGE,
-        bgcolor= ft.colors.WHITE30,
+        bgcolor= ft.Colors.WHITE,
         style= ft.TextStyle(
-            color = ft.colors.BLACK38,
+            color = ft.Colors.BLACK,
             font_family="Arial",
             italic=True,
             weight=ft.FontWeight.W_300
@@ -15,13 +15,13 @@ def main(page:ft.Page):
         overflow=ft.TextOverflow.ELLIPSIS,
         text_align=ft.TextAlign.CENTER
     )
-    text_one_style = ft.TextStyle(color=ft.colors.CYAN_ACCENT_200,
+    text_one_style = ft.TextStyle(color=ft.Colors.CYAN,
                                   decoration=ft.TextDecoration.UNDERLINE)
     
-    text_two_style = ft.TextStyle(bgcolor=ft.colors.INDIGO_900,
-                                  color=ft.colors.RED_400,
+    text_two_style = ft.TextStyle(bgcolor=ft.Colors.INDIGO_900,
+                                  color=ft.Colors.RED_400,
                                   decoration=ft.TextDecoration.OVERLINE,
-                                  decoration_color=ft.colors.GREEN,
+                                  decoration_color=ft.Colors.GREEN,
                                   decoration_style=ft.TextDecorationStyle.DOUBLE)
     t2 = ft.Text(
         spans= [
@@ -31,7 +31,8 @@ def main(page:ft.Page):
             ft.TextSpan(text="Continuação do texto", style=text_two_style)
         ]
     )
-    page.add(t1, t2)
+    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.add(t1,t2)
     page.update()
 
-ft.app(target=main)
+ft.run(main)

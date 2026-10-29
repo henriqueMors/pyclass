@@ -6,7 +6,7 @@ def main(page:ft.Page):
     # Adicionando a imagem
     img = ft.Image(
         src="https://www.w3schools.com/w3images/lights.jpg",
-        border_radius=ft.border_radius.all(40),
+        border_radius=ft.BorderRadius.all(40),
         width=1000,
         height=1000,
         tooltip="Imagem Teste"
@@ -15,4 +15,4 @@ def main(page:ft.Page):
     page.add(img)
     page.update()
 
-ft.app(target=main)
+ft.run(main)
