@@ -7,15 +7,16 @@ def main(page:ft.Page):
         label="Nome",
         hint_text="Digite seu nome",
         width=300,
-        border_color=ft.colors.BLUE_300
+        border_color=ft.Colors.BLUE_300
     )
     
     password_input = ft.TextField(
         label="Senha",
         hint_text="Digite sua senha",
         password=True,
+        can_reveal_password=True,
         width=300,
-        border_color=ft.colors.RED_300
+        border_color=ft.Colors.RED_300
     )
     
     checkbox = ft.Checkbox(
@@ -38,19 +39,16 @@ def main(page:ft.Page):
         t.value = f"Sua cor favorita é: {cg.value}"
         page.update()
 
-    color_button = ft.ElevatedButton(
-        text="Submit",
-        on_click=button_clicked
-    )
+    color_button = ft.Button("Submit", on_click=button_clicked)
     
     dropdown = ft.Dropdown(
         label="Escolha uma opção",
         options=[
-            ft.dropdown.Option("Opção 1"),
-            ft.dropdown.Option("Opção 2"),
-            ft.dropdown.Option("Opção 3"),
+            ft.DropdownOption("Opção 1"),
+            ft.DropdownOption("Opção 2"),
+            ft.DropdownOption("Opção 3"),
         ],
-        on_change=lambda e: print(f"Opção escolhida: {e.control.value}")
+        on_select=lambda e: print(f"Opção escolhida: {e.control.value}")
     )
     
     page.add(
@@ -67,4 +65,4 @@ def main(page:ft.Page):
         )
     )
 
-ft.app(target=main)
+ft.run(main)
