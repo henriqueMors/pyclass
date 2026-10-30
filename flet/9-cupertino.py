@@ -6,9 +6,9 @@ def main(page:ft.Page):
     page.add(
         ft.CupertinoActivityIndicator(
             radius=50,
-            color=ft.colors.RED,
+            color=ft.Colors.RED,
             animating=True
         )
     )
 
-ft.app(target=main)
+ft.run(main)

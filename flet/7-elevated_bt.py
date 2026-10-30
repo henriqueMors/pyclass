@@ -34,17 +34,18 @@ import flet as ft
 def main(page:ft.Page):
     page.title = "Botão com conteúdo customizado"
     page.add(
-        ft.ElevatedButton(
-            width=150,
+        ft.Button(
+            width=200,
             content=ft.Row(
                 [
-                    ft.Icon(name=ft.icons.FAVORITE, color="pink"),
-                    ft.Icon(name=ft.icons.AUDIOTRACK, color="green"),
-                    ft.Icon(name=ft.icons.BEACH_ACCESS, color="blue"),
+                    ft.Icon(ft.Icons.FAVORITE, color=ft.Colors.PINK, size=30),
+                    ft.Icon(ft.Icons.AUDIOTRACK, color=ft.Colors.GREEN, size=30),
+                    ft.Icon(ft.Icons.BEACH_ACCESS, color=ft.Colors.BLUE, size=30),
+                    ft.Icon(ft.Icons.REFRESH, color=ft.Colors.BLUE_700, size=30),
                 ],
             ),
         ),
-        ft.ElevatedButton(
+        ft.Button(
             content = ft.Container(
                 content = ft.Column(
                     [
@@ -54,8 +55,8 @@ def main(page:ft.Page):
                     alignment=ft.MainAxisAlignment.CENTER,
                     spacing=5
                 ),
-                padding=ft.padding.all(10)
+                padding=ft.Padding.all(10)
             )
         )
     )
-ft.app(target=main)
+ft.run(main)
