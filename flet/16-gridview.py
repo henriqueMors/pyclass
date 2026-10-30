@@ -20,11 +20,11 @@ def main(page:ft.Page):
         images.controls.append(
             ft.Image(
                 src=f"https://picsum.photos/150/150?{i}",
-                fit=ft.ImageFit.NONE,
+                fit=ft.BoxFit.COVER,
                 repeat=ft.ImageRepeat.NO_REPEAT,
-                border_radius=ft.border_radius.all(20)
+                border_radius=ft.BorderRadius.all(20)
             )
         )
     page.update()
 
-ft.app(target=main, view=ft.AppView.WEB_BROWSER)
+ft.run(main, view=ft.AppView.WEB_BROWSER)

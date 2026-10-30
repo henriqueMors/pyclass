@@ -4,14 +4,14 @@ def main(page:ft.Page):
     page.title = "NavigationBar"
     page.navigation_bar = ft.NavigationBar(
         destinations= [
-            ft.NavigationBarDestination(icon=ft.icons.EXPLORE, label="Explore"),
-            ft.NavigationBarDestination(icon=ft.icons.COMMUTE, label="Commute"),
-            ft.NavigationBarDestination(icon=ft.icons.BOOKMARK_BORDER,
+            ft.NavigationBarDestination(ft.Icons.EXPLORE, label="Explore"),
+            ft.NavigationBarDestination(ft.Icons.COMMUTE, label="Commute"),
+            ft.NavigationBarDestination(ft.Icons.BOOKMARK_BORDER,
                                         label="Explore",
-                                        selected_icon=ft.icons.BOOKMARK
+                                        selected_icon=ft.Icons.BOOKMARK
                                         ),
         ]
     )
-    page.add(ft.Text("Body"))
+    page.add(ft.Text("Bodybulder"))
 
-ft.app(target=main)
+ft.run(main)

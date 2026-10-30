@@ -9,7 +9,7 @@ def main(page:ft.Page):
         },
         {
             "question": "Como instalar o Flet?",
-            "answer": "VOcê pode instalar o Flet usando o pip: 'pip install flet'. "
+            "answer": "Você pode instalar o Flet usando o pip: 'pip install flet'. "
         },
         {
             "question": "Onde posso encontrar a documentação?",
@@ -17,17 +17,17 @@ def main(page:ft.Page):
         }
     ]
     
-    def handle_change(e: ft.ControlEvent):
+    def handle_change(e: ft.Event):
         print(f"Panel {e.data} toggled")
         
-    def handle_delete(e: ft.ControlEvent):
+    def handle_delete(e: ft.Event):
         panel.controls.remove(e.control.data)
         page.update()
     
     panel = ft.ExpansionPanelList(
-        expand_icon_color=ft.colors.AMBER,
+        expand_icon_color=ft.Colors.AMBER,
         elevation=8,
-        divider_color=ft.colors.AMBER,
+        divider_color=ft.Colors.AMBER,
         on_change=handle_change
     )
     
@@ -46,10 +46,9 @@ def main(page:ft.Page):
                         ft.TextButton("Marcar como útil",
                                       on_click=lambda e, item=item: page.add(
                                           ft.Text(f"Você marcou a resposta: {item['answer']} como útil",
-                                                  color=ft.colors.GREEN_600)
+                                                  color=ft.Colors.GREEN_600)
                                       )),
-                        ft.IconButton(ft.icons.DELETE,
-                                      on_click=handle_delete, data=exp)
+                        ft.IconButton(ft.Icons.DELETE, on_click=handle_delete, data=exp)
                     ],
                     alignment=ft.MainAxisAlignment.END
                 )
@@ -58,4 +57,4 @@ def main(page:ft.Page):
         panel.controls.append(exp)
     page.add(panel)
 
-ft.app(target=main)
+ft.run(main)

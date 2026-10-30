@@ -7,32 +7,35 @@ def main(page:ft.Page):
         page.add(ft.Text("Drawer dismissed"))
     
     def handle_change(e):
-        page.add(ft.Text(f"Selected Index changed: {e.selected_index}"))
+        page.add(ft.Text(f"Selected Index changed: {e.control.selected_index}"))
         
-    drawer = ft.NavigationDrawer(
+    page.drawer = ft.NavigationDrawer(
         on_dismiss=handle_dismissal,
         on_change=handle_change,
         controls = [
             ft.Container(height=12),
             ft.NavigationDrawerDestination(
                 label="Item 1",
-                icon = ft.icons.DOOR_BACK_DOOR_OUTLINED,
-                selected_icon_content=ft.Icon(ft.icons.DOOR_BACK_DOOR)
+                icon = ft.Icons.DOOR_BACK_DOOR_OUTLINED,
+                selected_icon= ft.Icons.DOOR_BACK_DOOR,
             ),
             ft.Divider(thickness=2),
             ft.NavigationDrawerDestination(
                 label="Item 2",
-                icon_content = ft.Icon(ft.icons.MAIL_OUTLINED),
-                selected_icon =ft.icons.MAIL
+                icon = ft.Icons.MAIL_OUTLINED,
+                selected_icon = ft.Icons.MAIL,
             ),
             ft.NavigationDrawerDestination(
                 label="Item 3",
-                icon_content = ft.Icon(ft.icons.PHONE_OUTLINED),
-                selected_icon =ft.icons.PHONE
+                icon =ft.Icons.PHONE_OUTLINED,
+                selected_icon = ft.Icons.PHONE,
             ),
         ]
     )
-    
-    page.add(ft.ElevatedButton("Show drawer", on_click=lambda e: page.open(drawer)))
 
-ft.app(target=main)
+    async def abrir_drawer(e):
+        await page.show_drawer()
+    
+    page.add(ft.Button("Show drawer", on_click=abrir_drawer))
+
+ft.run(main)
